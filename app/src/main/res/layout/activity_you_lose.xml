@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoseActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You Lose the Game!"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_margin="5sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You got "
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_margin="5sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_margin="5sp"
+        android:id="@+id/points_num"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Again"
+            android:id="@+id/play_again"
+            android:onClick="OnBackGame"
+            android:layout_margin="5sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Page"
+            android:id="@+id/loser_main_page"
+            android:onClick="OnMainPage"
+            android:layout_margin="5sp"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

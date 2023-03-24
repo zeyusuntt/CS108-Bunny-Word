@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditScriptActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_500"
+        android:layout_marginHorizontal="5sp"
+        android:text="Tips: Only the first onClick() clause will execute (Use SET FIRST to change)"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fadeScrollbars="false"
+        android:fillViewport="true" >
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true" >
+
+            <edu.stanford.cs108.bunnyworld.EditScriptView
+                android:id="@+id/editScriptView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trigger: "
+            android:textColor="@color/purple_500"/>
+
+        <Spinner
+            android:id="@+id/triggerSpinner"
+            android:layout_width="0dp"
+            android:layout_height="25sp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By: "
+            android:textColor="@color/purple_500"/>
+
+        <Spinner
+            android:id="@+id/dropSpinner"
+            android:layout_width="0dp"
+            android:layout_height="25sp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Action: "
+            android:textColor="@color/purple_500"/>
+
+        <Spinner
+            android:id="@+id/verbSpinner"
+            android:layout_width="0dp"
+            android:layout_height="25sp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25sp"
+            android:text="Object: "
+            android:textColor="@color/purple_500"/>
+
+        <Spinner
+            android:id="@+id/objectSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="5sp">
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="110sp"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:onClick="onAdd"
+            android:layout_marginHorizontal="5dp"
+            />
+
+        <Button
+            android:layout_width="110sp"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            android:onClick="onUpdate"
+            android:layout_marginHorizontal="5dp"/>
+
+        <Button
+            android:layout_width="110sp"
+            android:layout_height="wrap_content"
+            android:text="SET FIRST"
+            android:onClick="onSetFirst"
+            android:layout_marginHorizontal="5dp"/>
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="110sp"
+            android:layout_height="wrap_content"
+            android:text="DELETE"
+            android:onClick="onDelete"
+            android:layout_marginHorizontal="5dp"/>
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="110sp"
+            android:layout_height="wrap_content"
+            android:text="back"
+            android:onClick="onBack"
+            android:layout_marginHorizontal="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

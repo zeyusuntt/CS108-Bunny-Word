@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".GameManagementActivity">
+
+    <edu.stanford.cs108.bunnyworld.GameManagementView
+        android:id="@+id/game_catalog_view"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="0.7" />
+<!--    <LinearLayout-->
+<!--        android:id="@+id/game_catalog_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0sp"-->
+<!--        android:layout_weight="0.7"-->
+<!--        android:orientation="horizontal" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="0.15"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/create_game"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="5dp"
+            android:onClick="onCreateGame"
+            android:text="CREATE" />
+
+        <Button
+            android:id="@+id/edit_game"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="5dp"
+            android:onClick="onEditGame"
+            android:text="EDIT" />
+
+        <Button
+            android:id="@+id/delete_game"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:onClick="onDeleteGame"
+            android:text="DELETE" />
+
+        <Button
+            android:id="@+id/main_back"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="5dp"
+            android:onClick="onBack"
+            android:text="BACK" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="0.15"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:text="GAME NAME:"
+            android:textSize="15sp"
+            android:textColor="@color/purple_500" />
+
+        <EditText
+            android:id="@+id/game_new_name"
+            android:layout_width="95sp"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"/>
+
+        <Button
+            android:id="@+id/change_game_name"
+            android:layout_width="195sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:onClick="onChangeGameName"
+            android:text="CHANGE NAME" />
+
+    </LinearLayout>
+
+</LinearLayout>
